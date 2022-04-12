@@ -1,11 +1,16 @@
 export class Course {
     id!: number ;
     name!: string ;
-    imageUrl!: string;
-    price!: number;
-    code!: string;
-    duration!: number;
-    rating!: number;
-    releaseDate!: string;
-    description!: string;
+    precoTotal!: number;
+    cpf!: string;
+    endereco!: string;
+    numeroCasa!: number;
+    cidade!: string;
+    bairro!: string;
+    estado!: string;
+    cep!: number;
+    quantidadeDias!: string;
+    opcaoQuarto!: number;
+    pacote!: string;
+    precodiaria!: string;
 }
