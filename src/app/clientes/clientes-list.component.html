@@ -1,16 +1,17 @@
 <h2>Lista de Clientes</h2>
+<br/>
 
 <div class="form-group row">
-    <label class="col-sm-2 col-form-label">Procurar cliente :</label>
-    <div class="col-sm-10">
+    <label class="col-sm-2 col-form-label"><h5>Procurar cliente :</h5></label>
+    <div class="col-sm-10 row align-items-center">
         <input [(ngModel)]="filter" class="from-control">
     </div>
-    <a [routerLink]="['/clientes/novo']" class="btn btn-dark mr-2">Novo</a>
-
+    <a [routerLink]="['/clientes/novo']" class="btn btn-dark mr-2 col-sm-12">Cadastrar novo cliente</a>
 </div>
+<br/>
 
-<table class="table table-striped">
-    <thead>
+<table class="table table-striped table-hover">
+    <thead class="table-dark">
         <tr>
             <th>Nome</th>
             <th>Preço</th>
@@ -18,6 +19,7 @@
             <th>Dias de hospedagem</th>
             <th>Opção de quarto</th>
             <th>Pacote</th>
+            <th>Opções</th>
 
         </tr>
     </thead>
@@ -28,10 +30,10 @@
             <td>{{ clientes.precoTotal }}</td>
             <td>{{ clientes.cpf }}</td>
             <td>{{ clientes.quantidadeDias }}</td>
-            <td>{{ clientes.opcaoQuarto }}</td>
+            <td>{{ clientes.opcaoDeQuarto }}</td>
             <td>{{ clientes.pacote }}</td>
             <td>
-            <a [routerLink]="['/clientes/info', clientes.id]" class="btn btn-light mr-2">Edit</a>
+            <a [routerLink]="['/clientes/info', clientes.id]" class="btn btn-dark mr-2" style="background-color: grey;">Informações</a>
             <button (click)="deleteById(clientes.id)" class="btn btn-dark">Delete</button>
             </td>
 

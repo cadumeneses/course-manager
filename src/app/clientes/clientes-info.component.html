@@ -15,10 +15,10 @@
     </div>
 
     <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Price:</label>    
+        <label class="col-sm-2 col-form-label">Preco:</label>    
         <div class="col-sm-10">
-            <input [(ngModel)]="clientes.precoTotal" required name="precoTotal" #clientesPrice="ngModel" type="number" 
-                [ngClass]="{'is-invalid': clientesPrice.invalid}" class="form-control">
+            <input [(ngModel)]="clientes.precoTotal" required name="precoTotal" #clientesPrecoTotal="ngModel" type="number" 
+                [ngClass]="{'is-invalid': clientesPrecoTotal.invalid}" class="form-control">
             
             <div class="invalid-feedback">
                 <span>clientes price is required</span>
@@ -30,10 +30,10 @@
         <label class="col-sm-2 col-form-label">CPF:</label>    
         <div class="col-sm-10">
             <textarea [(ngModel)]="clientes.cpf" required name="cpf" #clientesCpf="ngModel" 
-                [ngClass]="{'is-invalid': clientesDescription.invalid}" class="form-control"></textarea>
+                [ngClass]="{'is-invalid': clientesCpf.invalid}" class="form-control"></textarea>
             
             <div class="invalid-feedback">
-                <span>clientes description is required</span>
+                <span>clientes cpf is required</span>
             </div>
         </div>        
     </div>
@@ -42,10 +42,10 @@
         <label class="col-sm-2 col-form-label">Endereço:</label>    
         <div class="col-sm-10">
             <textarea [(ngModel)]="clientes.endereco" required name="endereco" #clientesEndereco="ngModel" 
-                [ngClass]="{'is-invalid': clientesDescription.invalid}" class="form-control"></textarea>
+                [ngClass]="{'is-invalid': clientesEndereco.invalid}" class="form-control"></textarea>
             
             <div class="invalid-feedback">
-                <span>clientes description is required</span>
+                <span>clientes address is required</span>
             </div>
         </div>        
     </div>
@@ -53,11 +53,11 @@
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">Número da Casa:</label>    
         <div class="col-sm-10">
-            <textarea [(ngModel)]="clientes.numeroCasa" required name="description" #clientesDescription="ngModel" 
-                [ngClass]="{'is-invalid': clientesDescription.invalid}" class="form-control"></textarea>
+            <textarea [(ngModel)]="clientes.numeroCasa" required name="numeroCasa" #clientesNumeroCasa="ngModel" 
+                [ngClass]="{'is-invalid': clientesNumeroCasa.invalid}" class="form-control"></textarea>
             
             <div class="invalid-feedback">
-                <span>clientes description is required</span>
+                <span>clientes house number is required</span>
             </div>
         </div>        
     </div>
@@ -65,11 +65,11 @@
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">Cidade:</label>    
         <div class="col-sm-10">
-            <textarea [(ngModel)]="clientes.cidade" required name="description" #clientesDescription="ngModel" 
-                [ngClass]="{'is-invalid': clientesDescription.invalid}" class="form-control"></textarea>
+            <textarea [(ngModel)]="clientes.cidade" required name="cidade" #clientesCidade="ngModel" 
+                [ngClass]="{'is-invalid': clientesCidade.invalid}" class="form-control"></textarea>
             
             <div class="invalid-feedback">
-                <span>clientes description is required</span>
+                <span>clientes city is required</span>
             </div>
         </div>        
     </div>
@@ -77,8 +77,8 @@
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">Bairro:</label>    
         <div class="col-sm-10">
-            <textarea [(ngModel)]="clientes.bairro" required name="description" #clientesDescription="ngModel" 
-                [ngClass]="{'is-invalid': clientesDescription.invalid}" class="form-control"></textarea>
+            <textarea [(ngModel)]="clientes.bairro" required name="bairro" #clientesBairro="ngModel" 
+                [ngClass]="{'is-invalid': clientesBairro.invalid}" class="form-control"></textarea>
             
             <div class="invalid-feedback">
                 <span>clientes description is required</span>
@@ -93,7 +93,7 @@
                 [ngClass]="{'is-invalid': clientesDescription.invalid}" class="form-control"></textarea>
             
             <div class="invalid-feedback">
-                <span>clientes description is required</span>
+                <span>clientes district is required</span>
             </div>
         </div>        
     </div>
@@ -101,11 +101,11 @@
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">CEP:</label>    
         <div class="col-sm-10">
-            <textarea [(ngModel)]="clientes.cep" required name="description" #clientesDescription="ngModel" 
+            <textarea [(ngModel)]="clientes.cep" required name="cep" #clientesCep="ngModel" 
                 [ngClass]="{'is-invalid': clientesDescription.invalid}" class="form-control"></textarea>
             
             <div class="invalid-feedback">
-                <span>clientes description is required</span>
+                <span>clientes cep is required</span>
             </div>
         </div>        
     </div>
@@ -113,11 +113,11 @@
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">Quantidade de Dias:</label>    
         <div class="col-sm-10">
-            <textarea [(ngModel)]="clientes.quantidadeDias" required name="description" #clientesDescription="ngModel" 
-                [ngClass]="{'is-invalid': clientesDescription.invalid}" class="form-control"></textarea>
+            <textarea [(ngModel)]="clientes.quantidadeDias" required name="quantidadeDias" #clientesQuantidadeDias="ngModel" 
+                [ngClass]="{'is-invalid': clientesQuantidadeDias.invalid}" class="form-control"></textarea>
             
             <div class="invalid-feedback">
-                <span>clientes description is required</span>
+                <span>clientes days is required</span>
             </div>
         </div>        
     </div>
@@ -125,11 +125,11 @@
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">Opção Quarto:</label>    
         <div class="col-sm-10">
-            <textarea [(ngModel)]="clientes.opcaoQuarto" required name="description" #clientesDescription="ngModel" 
-                [ngClass]="{'is-invalid': clientesDescription.invalid}" class="form-control"></textarea>
+            <textarea [(ngModel)]="clientes.opcaoDeQuarto" required name="opcaoQuarto" #clientesOpcaoQuarto="ngModel" 
+                [ngClass]="{'is-invalid': clientesOpcaoQuarto.invalid}" class="form-control"></textarea>
             
             <div class="invalid-feedback">
-                <span>clientes description is required</span>
+                <span>clientes fourth option is required</span>
             </div>
         </div>        
     </div>
@@ -137,11 +137,11 @@
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">Pacote:</label>    
         <div class="col-sm-10">
-            <textarea [(ngModel)]="clientes.pacote" required name="description" #clientesDescription="ngModel" 
-                [ngClass]="{'is-invalid': clientesDescription.invalid}" class="form-control"></textarea>
+            <textarea [(ngModel)]="clientes.pacote" required name="pacote" #clientesPacote="ngModel" 
+                [ngClass]="{'is-invalid': clientesPacote.invalid}" class="form-control"></textarea>
             
             <div class="invalid-feedback">
-                <span>clientes description is required</span>
+                <span>clientes package is required</span>
             </div>
         </div>        
     </div>

@@ -10,7 +10,7 @@ export class Clientes {
     estado!: string;
     cep!: number;
     quantidadeDias!: string;
-    opcaoQuarto!: number;
+    opcaoDeQuarto!: number;
     pacote!: string;
     precodiaria!: string;
 }
