@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { Error404Component } from './error-404/error-404.component';
-import { CourseModule } from './courses/course.module';
+import { ClientesModule } from './clientes/clientes.module';
 import { CoreModule } from './Core/core.module';
 
 @NgModule({
@@ -17,12 +17,12 @@ import { CoreModule } from './Core/core.module';
   ],
   imports: [
     BrowserModule,
-    CourseModule,
+    ClientesModule,
     CoreModule,
     HttpClientModule,
     RouterModule.forRoot([
       {
-        path: '', redirectTo: 'courses', pathMatch: 'full'
+        path: '', redirectTo: 'clientes', pathMatch: 'full'
       },
       {
         path: '**', component: Error404Component

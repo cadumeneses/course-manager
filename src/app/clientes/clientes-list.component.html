@@ -5,6 +5,8 @@
     <div class="col-sm-10">
         <input [(ngModel)]="filter" class="from-control">
     </div>
+    <a [routerLink]="['/clientes/novo']" class="btn btn-dark mr-2">Novo</a>
+
 </div>
 
 <table class="table table-striped">
@@ -21,16 +23,16 @@
     </thead>
 
     <tbody>
-        <tr *ngFor="let course of filteredCourses">
-            <td>{{ course.name }}</td>
-            <td>{{ course.precoTotal }}</td>
-            <td>{{ course.cpf }}</td>
-            <td>{{ course.quantidadeDias }}</td>
-            <td>{{ course.opcaoQuarto }}</td>
-            <td>{{ course.pacote }}</td>
+        <tr *ngFor="let clientes of filteredClientes">
+            <td>{{ clientes.name }}</td>
+            <td>{{ clientes.precoTotal }}</td>
+            <td>{{ clientes.cpf }}</td>
+            <td>{{ clientes.quantidadeDias }}</td>
+            <td>{{ clientes.opcaoQuarto }}</td>
+            <td>{{ clientes.pacote }}</td>
             <td>
-            <a [routerLink]="['/course/info', course.id]" class="btn btn-light mr-2">Edit</a>
-            <button (click)="deleteById(course.id)" class="btn btn-dark">Delete</button>
+            <a [routerLink]="['/clientes/info', clientes.id]" class="btn btn-light mr-2">Edit</a>
+            <button (click)="deleteById(clientes.id)" class="btn btn-dark">Delete</button>
             </td>
 
 

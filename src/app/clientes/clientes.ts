@@ -1,4 +1,4 @@
-export class Course {
+export class Clientes {
     id!: number ;
     name!: string ;
     precoTotal!: number;
