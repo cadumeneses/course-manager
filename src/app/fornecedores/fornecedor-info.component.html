@@ -1,0 +1,92 @@
+<h2>Informações do fornecedor</h2>
+
+<br/>
+
+<form #courseForm="ngForm" *ngIf="fornecedor">
+
+    <div class=" form-group row">
+        <label class="col-sm-2 col-form-label">Nome:</label>
+        <div class="col-sm-10">
+            <input [(ngModel)]="fornecedor.nome" required name="nome" #fornecedorNome="ngModel" [ngClass]="{'is-invalid': fornecedorNome.invalid}" class="form-control">
+            <div class="invalid-feedback">
+               <span>Nome do fornecedor é requerido</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Valor mensal:</label>    
+        <div class="col-sm-10">
+            <input [(ngModel)]="fornecedor.valorMes" required name="valorMes" #fornecedorValorMes="ngModel" type="number" 
+                [ngClass]="{'is-invalid': fornecedorValorMes.invalid}" class="form-control">
+            
+            <div class="invalid-feedback">
+                <span>Valor mensal é requerido</span>
+            </div>
+        </div>        
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">CNPJ:</label>    
+        <div class="col-sm-10">
+            <textarea [(ngModel)]="fornecedor.cnpj" required name="cnpj" #fornecedorCnpj="ngModel" 
+                [ngClass]="{'is-invalid': fornecedorCnpj.invalid}" class="form-control"></textarea>
+            
+            <div class="invalid-feedback">
+                <span>CNPJ do fornecedor é requerido</span>
+            </div>
+        </div>        
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Valor diário:</label>    
+        <div class="col-sm-10">
+            <textarea [(ngModel)]="fornecedor.valorDiario" required name="valorDiario" #fornecedorValorDiario="ngModel" 
+                [ngClass]="{'is-invalid': fornecedorValorDiario.invalid}" class="form-control"></textarea>
+            
+            <div class="invalid-feedback">
+                <span>Valor diário é requerido</span>
+            </div>
+        </div>        
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Produto:</label>    
+        <div class="col-sm-10">
+            <textarea [(ngModel)]="fornecedor.produto" required name="produto" #fornecedorProduto="ngModel" 
+                [ngClass]="{'is-invalid': fornecedorProduto.invalid}" class="form-control"></textarea>
+            
+            <div class="invalid-feedback">
+                <span>Produto é requerido</span>
+            </div>
+        </div>        
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Quantidade Mensal:</label>    
+        <div class="col-sm-10">
+            <textarea [(ngModel)]="fornecedor.quantidadeMes" required name="quantidadeMes" #FornecedorQuantidadeMes="ngModel" 
+                [ngClass]="{'is-invalid': FornecedorQuantidadeMes.invalid}" class="form-control"></textarea>
+            
+            <div class="invalid-feedback">
+                <span>Quantidade mensal é requerida</span>
+            </div>
+        </div>        
+    </div>
+
+   <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Quantidade diária:</label>    
+        <div class="col-sm-10">
+            <textarea [(ngModel)]="fornecedor.quantidadeDia" required name="quantidadeDia" #FornecedorQuantidadeDia="ngModel" 
+                [ngClass]="{'is-invalid': FornecedorQuantidadeDia.invalid}" class="form-control"></textarea>
+            
+            <div class="invalid-feedback">
+                <span>Quantidade diária é requerida</span>
+            </div>
+        </div>        
+    </div>
+
+    <button  (click)="save()" class="btn btn-info mr-2">Save</button>
+    <button [routerLink]="['/clientes']" class="btn btn-secondary">Back</button>
+
+</form>

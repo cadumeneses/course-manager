@@ -2,3 +2,7 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 @import '~font-awesome/css/font-awesome.min.css';
+
+h2{
+    color: #002A5A;
+}

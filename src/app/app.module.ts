@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { Error404Component } from './error-404/error-404.component';
 import { ClientesModule } from './clientes/clientes.module';
 import { CoreModule } from './Core/core.module';
+import { FornecedoresModule } from './fornecedores/fornecedor.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CoreModule } from './Core/core.module';
   imports: [
     BrowserModule,
     ClientesModule,
+    FornecedoresModule,
     CoreModule,
     HttpClientModule,
     RouterModule.forRoot([
