@@ -9,7 +9,7 @@ import { Observable } from "rxjs";
 
 export class FornecedorService {
 
-    private FornecedorUrl: string = 'http://localhost:3100/api/courses';
+    private FornecedorUrl: string = 'http://localhost:3200/api/fornecedor';
 
     constructor(private httpClient: HttpClient){ }
 

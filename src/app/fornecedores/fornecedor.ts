@@ -1,6 +1,7 @@
 export class Fornecedor{
     id!: number;
     nome!: string;
+    cnpj!: string;
     quantidadeMes!: number;
     quantidadeDia!: number;
     valorDiario!: number;
@@ -8,5 +9,4 @@ export class Fornecedor{
     produto!: string;
     total!: number;
     static id: any;
-    cnpj!: string;
     }

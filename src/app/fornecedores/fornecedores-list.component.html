@@ -24,13 +24,13 @@
 
     <tbody>
         <tr *ngFor="let fornecedor of filteredFornecedores">
-            <td>{{ fornecedor.nome }}</td>
+            <td>{{ fornecedor.nome | uppercase }}</td>
             <td>{{ fornecedor.valorMes }}</td>
             <td>{{ fornecedor.cnpj }}</td>
-            <td>{{ fornecedor.produto }}</td>
+            <td>{{ fornecedor.produto | uppercase }}</td>
             <td>{{ fornecedor.quantidadeMes }}</td>
             <td>
-            <a [routerLink]="['/fornecedor/info', fornecedor.id]" class="btn btn-dark mr-2" style="background-color: grey;">Informações</a>
+            <a [routerLink]="['/fornecedor/info', fornecedor.id]" class="btn btn-dark mx-2" style="background-color: grey;">Informações</a>
             <button (click)="deleteById(fornecedor.id)" class="btn btn-dark">Delete</button>
             </td>
 

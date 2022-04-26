@@ -26,14 +26,14 @@
 
     <tbody>
         <tr *ngFor="let clientes of filteredClientes">
-            <td>{{ clientes.name }}</td>
+            <td>{{ clientes.name | uppercase }}</td>
             <td>{{ clientes.precoTotal }}</td>
             <td>{{ clientes.cpf }}</td>
             <td>{{ clientes.quantidadeDias }}</td>
             <td>{{ clientes.opcaoDeQuarto }}</td>
-            <td>{{ clientes.pacote }}</td>
+            <td>{{ clientes.pacote | uppercase }}</td>
             <td>
-            <a [routerLink]="['/clientes/info', clientes.id]" class="btn btn-dark mr-2" style="background-color: grey;">Informações</a>
+            <a [routerLink]="['/clientes/info', clientes.id]" class="btn btn-dark mx-2" style="background-color: grey;">Informações</a>
             <button (click)="deleteById(clientes.id)" class="btn btn-dark">Delete</button>
             </td>
 
